@@ -1,57 +1,57 @@
 // JS Practice, Odin Project, Calculator
 //	-Brian
 
-var my_max,	vowel_count, reverse;
+// Warm up functions
+	var my_max,	vowel_count, reverse;
 
-// Finds maximum number out of an array.
-function my_max(numbers)
-{
-	return Math.max.apply(Math, numbers);
-}
-/*var question = [12, 18, 38, 2, 58, 10, 23];
-var answer = my_max(question);
-console.log(answer);*/
-
-
-// Takes a string and returns the number of vowels in it. (AEIOUY)
-function vowel_count(phrase)
-{
-	var numVowels = 0;
-	var vowels = ["a", "e", "i", "o", "u", "y"];
-	var lowPhrase = phrase.toLowerCase();
-
-	for(i = 0; i < lowPhrase.length; i++)
+	// Finds maximum number out of an array.
+	function my_max(numbers)
 	{
-		for(j = 0; j < vowels.length; j++)
+		return Math.max.apply(Math, numbers);
+	}
+	/*var question = [12, 18, 38, 2, 58, 10, 23];
+	var answer = my_max(question);
+	console.log(answer);*/
+
+	// Takes a string and returns the number of vowels in it. (AEIOUY)
+	function vowel_count(phrase)
+	{
+		var numVowels = 0;
+		var vowels = ["a", "e", "i", "o", "u", "y"];
+		var lowPhrase = phrase.toLowerCase();
+
+		for(i = 0; i < lowPhrase.length; i++)
 		{
-			if(lowPhrase[i] === vowels[j])
+			for(j = 0; j < vowels.length; j++)
 			{
-				numVowels++;
-			}
-		}		
+				if(lowPhrase[i] === vowels[j])
+				{
+					numVowels++;
+				}
+			}		
+		}
+		return numVowels;
 	}
-	return numVowels;
-}
-/*var phrase = "I b d e f H y uItnm bE";
-console.log(vowel_count(phrase));*/
+	/*var phrase = "I b d e f H y uItnm bE";
+	console.log(vowel_count(phrase));*/
 
-
-// Takes a string, returns reversed character order
-function reverse(saying)
-{
-	var gniyas = [];
-	var leng = saying.length;
-	for (var i = 0; i <= saying.length; i++)
+	// Takes a string, returns reversed character order
+	function reverse(saying)
 	{
-		gniyas.push(saying[leng]);
-		leng -= 1;
+		var gniyas = [];
+		var leng = saying.length;
+		for (var i = 0; i <= saying.length; i++)
+		{
+			gniyas.push(saying[leng]);
+			leng -= 1;
+		}
+		return gniyas;
 	}
-	return gniyas;
-}
-/*var saying = "Hi, how are you?";
-console.log(reverse(saying));*/
+	/*var saying = "Hi, how are you?";
+	console.log(reverse(saying));*/
 
 
+var add, multiply, divide, subtract;
 
 // Takes two numbers, adds them
 function add(num1, num2)

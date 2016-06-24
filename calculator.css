@@ -1,0 +1,14 @@
+#keys {
+	background-color: red;
+	margin: auto;
+	width: 50%;
+	height: 75%;
+}
+
+.key {
+	width: 33.33%;
+	height: 25%;
+	text-align: center;
+	margin: auto;
+	padding: 2%;
+}
