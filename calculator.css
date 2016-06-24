@@ -1,14 +1,25 @@
+#screen {
+	background-color: green;
+	margin: auto;
+    width: 406px;
+    height: 150px;
+	border: 1px solid black;
+}
 #keys {
 	background-color: red;
 	margin: auto;
-	width: 50%;
-	height: 75%;
+	width: 408px;
+	height: 508px;
+	cursor: pointer;
 }
 
 .key {
-	width: 33.33%;
-	height: 25%;
+	border: 1px solid black;
+	width: 100px;
+	height: 125px;
 	text-align: center;
-	margin: auto;
-	padding: 2%;
+	float: left;
+	line-height: 125px;
+	/*margin: auto;*/
+	/*padding: 2%;*/
 }
