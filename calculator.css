@@ -18,8 +18,13 @@
 	width: 100px;
 	height: 125px;
 	text-align: center;
+	font-size: 4em;
 	float: left;
 	line-height: 125px;
 	/*margin: auto;*/
 	/*padding: 2%;*/
+}
+
+.active {
+	background-color: green;
 }

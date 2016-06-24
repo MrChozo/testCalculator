@@ -3,7 +3,9 @@
 <head>
 	<title>Calculator - Odin Project Practice</title>
 	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="calculator.js"></script>
+	<script src="calculatorJq.js"></script>
 </head>
 <body>
 	<div id="screen"></div>
@@ -11,19 +13,19 @@
 		<div id="num1" class="key">1</div>
 		<div id="num2" class="key">2</div>
 		<div id="num3" class="key">3</div>
-		<div id="numPlus" class="key">+</div>
+		<div id="numDiv" class="key" onclick="divide()">/</div>
 		<div id="num4" class="key">4</div>
 		<div id="num5" class="key">5</div>
 		<div id="num6" class="key">6</div>
-		<div id="numSub" class="key">-</div>
+		<div id="numMult" class="key" onclick="multiply()">x</div>
 		<div id="num7" class="key">7</div>
 		<div id="num8" class="key">8</div>
 		<div id="num9" class="key">9</div>
-		<div id="numMult" class="key">x</div>
+		<div id="numSub" class="key" onclick="subtract()">-</div>
 		<div id="numClr" class="key">C</div>
 		<div id="num0" class="key">0</div>		
 		<div id="numEqual" class="key">=</div>
-		<div id="numDiv" class="key">/</div>
+		<div id="numPlus" class="key" onclick="add()">+</div>
 	</div>
 </body>
 </html>

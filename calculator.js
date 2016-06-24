@@ -51,7 +51,22 @@
 	console.log(reverse(saying));*/
 
 
-var add, multiply, divide, subtract;
+// JQuery for effects
+$(document).ready(function() 
+{
+	$(".key").hover(
+		function()
+		{
+			$(this).fadeTo("fast", 0.5);
+		},
+		function()
+		{
+			$(this).fadeTo("fast", 1);
+		}
+	);
+});
+
+var add, multiply, divide, subtract, display;
 
 // Takes two numbers, adds them
 function add(num1, num2)
@@ -75,4 +90,10 @@ function divide(num1, num2)
 function subtract(num1, num2)
 {
 	return num1 - num2;
+}
+
+// Display a number/symbol in the screen div
+function display(entry)
+{
+
 }
