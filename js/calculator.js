@@ -1,10 +1,23 @@
-// JS Practice, Odin Project, Calculator
-//	-Brian
+/** 
+ * JS-JQuery Practice
+ * Odin Project
+ * Calculator
+ * -Brian
+ *
+ * Answer can only go up to: 9999999999999 while fitting in screen
+ */
 
-// JQuery for effects
 $(document).ready(function() 
 {
-	// Change key color on hover
+	var add, multiply, divide, subtract, display;
+
+	var operand1 = [];
+	var operand2 = [];
+	var operator = "";
+	var firstNumIsStored = false;
+	var secondNumIsStored = false;
+
+// Change key color on hover
 	$(".number, .operator").hover(
 		function()
 		{
@@ -16,54 +29,85 @@ $(document).ready(function()
 		}
 	);
 
-	// Display button value in highScreen div
+// Number handling
 	$(".number").click(function()
 	{
 		var numberText = $(this).text();
-		$("#highScreen").text($("#highScreen").text() + numberText);
+
+		if(!firstNumIsStored)
+		{
+			// Display button value in highScreen div
+			$("#highScreen").text($("#highScreen").text() + numberText);
+			// Push numbers in first operand
+			operand1.push(parseInt(numberText));
+		}
+		else
+		{
+			// Clear highScreen
+			$("#highScreen").text("");
+			// Display button value in highScreen div
+			$("#highScreen").text($("#highScreen").text() + numberText);
+			// Store numbers in second operand.
+			operand2.push(parseInt(numberText));
+		}
 	});
 
-	// When operator button is pressed, display it in lowScreen
+// Operators except Clear and Equals
 	$("#numPlus, #numSub, #numMult, #numDiv").click(function()
 	{
+		// When an operator button is pressed, display it in lowScreen
 		var opText = $(this).text();
 		$("#lowScreen").text(opText);
+
+		operator = opText;
+		// 
 	});
 
-	// When Clear button is clicked, clears both screens
+// When Clear button is clicked, clears both screens and resets stored values
 	$("#numClr").click(function()
 	{
 		$("#highScreen, #lowScreen").text("");
+		operand1 = [];
+		operand2 = [];
+		firstNumIsStored = false;
+		secondNumIsStored = false;
 	});
-});
 
-var add, multiply, divide, subtract, display;
+// When Equals button is clicked, calculate equation and return answer to screen.
+	$("#numEqual").click(function()
+	{
+		if(firstNumIsStored && secondNumIsStored)
+		{
 
-var operand1 = [];
-var operand2 = [];
+		}
+	});
 
-// Takes two numbers, adds them
-function add(num1, num2)
-{
-	return num1 + num2;
-}
-// Takes two numbers, multiplies them
-function multiply(num1, num2)
-{
-	return num1 * num2;
-}
-// Takes two numbers, divides first by second
-function divide(num1, num2)
-{
-	return num1 / num2;
-}
-// Takes two numbers, subtracts first from second
-function subtract(num1, num2)
-{
-	return num1 - num2;
-}
+}); // END $(document).ready
 
-// Clears out number arrays
 
-// Enters number into array
+// Pure JavaScript, not sure if keeping these.
+	// Takes two numbers, adds them
+	function add(num1, num2)
+	{
+		return num1 + num2;
+	}
+	// Takes two numbers, multiplies them
+	function multiply(num1, num2)
+	{
+		return num1 * num2;
+	}
+	// Takes two numbers, divides first by second
+	function divide(num1, num2)
+	{
+		return num1 / num2;
+	}
+	// Takes two numbers, subtracts first from second
+	function subtract(num1, num2)
+	{
+		return num1 - num2;
+	}
+
+	// Clears out number arrays
+
+	// Enters number into array
 
