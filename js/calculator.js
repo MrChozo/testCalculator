@@ -70,15 +70,13 @@ $(document).ready(function()
 		operand1 = [];
 		operand2 = [];
 		firstNumIsStored = false;
-		secondNumIsStored = false;
 	});
 
 // When Equals button is clicked, calculate equation and return answer to screen.
 	$("#numEqual").click(function()
 	{
-		if(firstNumIsStored && secondNumIsStored)
-		{
-
+		if(firstNumIsStored)
+		{			
 		}
 	});
 
