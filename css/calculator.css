@@ -1,53 +1,44 @@
 #container {
+    background-color: gray;
     border: 2px solid black;
-    width: 420px;
     height: 673px;
     margin: auto;
-    background-color: gray;
+    width: 420px;
 }
 #screen {
     background-color: #87a087;
-    margin: 7px auto auto auto;
-    width: 406px;
-    height: 150px;
     border: 1px solid black;
     color: black;
     font-size: 3.9em; 
+    height: 150px;
+    margin: 7px auto auto auto;
+    width: 406px;
 }
 #highScreen {
-	width: 406px;
-    height: 75px;
+	height: 75px;
 	text-align: right;
+	width: 406px;
 }
 #lowScreen {
-	width: 406px;
-    height: 75px;
+	height: 75px;
 	text-align: right;
+	width: 406px;
 }
 #keys {
 	background-color: red;
+	cursor: pointer;
+	height: 508px;
 	margin: auto;
 	width: 408px;
-	height: 508px;
-	cursor: pointer;
 }
-.number {
+.button {
 	border: 1px solid black;
-	width: 100px;
-	height: 125px;
-	text-align: center;
-	font-size: 4em;
 	float: left;
-	line-height: 125px;
-}
-.operator {
-	border: 1px solid black;
-	width: 100px;
-	height: 125px;
-	text-align: center;
 	font-size: 4em;
-	float: left;
+	height: 125px;
 	line-height: 125px;
+	text-align: center;
+	width: 100px;
 }
 .active {
 	background-color: #b30000;
